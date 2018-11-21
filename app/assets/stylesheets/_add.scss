@@ -1,0 +1,13 @@
+.resizeimage {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.col-md-4 .resizeimage {
+  background-color: #fff;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}

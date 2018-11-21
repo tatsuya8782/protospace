@@ -1,0 +1,20 @@
+- if user_signed_in?
+  - if @prototype.like_user(current_user.id)
+    = button_to prototype_like_path(@prototype, id:params), method: :delete, id: "like-button", remote: true do
+      .likeicon-red
+        = fa_icon 'heart 2x'
+      %span like
+      %span
+        = @prototype.likes_count
+  - else
+    = button_to prototype_likes_path(@prototype), id: "like-button", remote: true do
+      .likeicon
+        = fa_icon 'gratipay 2x'
+      %span like
+      %span
+        = @prototype.likes_count
+- else
+  .likeicon
+    = fa_icon 'gratipay 2x'
+  %span
+    = @prototype.likes_count
